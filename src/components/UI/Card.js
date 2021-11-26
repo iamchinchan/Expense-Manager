@@ -1,5 +1,7 @@
-import "./css/Card.css";
-function Card(props) {
+import React from "react";
+import "../css/Card.css";
+
+const Card = (props) => {
     const classes= 'card '+props.className
   return <div className={classes}>{props.children}</div>;
 }
