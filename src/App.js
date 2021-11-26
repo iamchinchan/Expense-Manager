@@ -29,7 +29,7 @@ const App = () => {
 
   const addExpenseDataHandler = (newExpenseData) => {
     setExpenses((prevValues) => {
-      return [...prevValues, newExpenseData];
+      return [ newExpenseData ,...prevValues];
     });
   };
 
