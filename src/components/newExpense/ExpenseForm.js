@@ -11,7 +11,7 @@ const ExpenseForm = (props) => {
   //     enteredAmount:"",
   //     enteredDate:"",
   // });
-  console.log(enteredTitle, enteredAmount, enteredDate);
+  // console.log(enteredTitle, enteredAmount, enteredDate);
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
     // setUserInput((prevState)=>{
@@ -32,7 +32,7 @@ const ExpenseForm = (props) => {
     event.preventDefault();
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate), //for converting the string date to date object which then stored in date key of expenseData const
     };
     console.log("hey: ", expenseData);
@@ -70,8 +70,8 @@ const ExpenseForm = (props) => {
           <input
             value={enteredDate}
             type="date"
-            min="2019-01-01"
-            max="2022-12-31"
+            min="2018-01-01"
+            max="2021-12-31"
             onChange={dateChangeHandler}
           />
         </div>
